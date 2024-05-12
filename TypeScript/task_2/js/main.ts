@@ -37,14 +37,22 @@ class Teacher implements TeacherInterface {
 }
 
 function createEmployee(salary: number | string): Director | Teacher {
-  return typeof salary === 'number' && salary <= 500
+  return typeof salary === 'number' && salary < 500
     ? new Teacher()
     : new Director();
 }
 
-console.log(createEmployee(200));
-// Teacher
-console.log(createEmployee(1000));
-// Director
-console.log(createEmployee('$500'));
-// Director
+// 6. Creating functions specific to employees
+
+function isDirector(employee: Director | Teacher): employee is Director {
+  return (employee as Director).workDirectorTasks !== undefined;
+}
+
+function executeWork(employee: Director | Teacher) {
+  return isDirector(employee)
+    ? employee.workDirectorTasks()
+    : employee.workTeacherTasks();
+}
+
+console.log(executeWork(createEmployee(200)));
+console.log(executeWork(createEmployee(1000)));
