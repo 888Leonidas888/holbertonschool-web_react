@@ -54,5 +54,13 @@ function executeWork(employee: Director | Teacher) {
     : employee.workTeacherTasks();
 }
 
-console.log(executeWork(createEmployee(200)));
-console.log(executeWork(createEmployee(1000)));
+// 7. String literal types
+
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects) {
+  return `Teaching ${todayClass}`;
+}
+
+console.log(teachClass('Math'));
+console.log(teachClass('History'));
