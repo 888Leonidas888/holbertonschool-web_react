@@ -5,3 +5,7 @@ export function getFullYear() {
 export function getFooterCopy(isIndex) {
   return isIndex ? 'Holberton School' : 'Holberton School main dashboard';
 }
+
+export function getLastestNotification() {
+  return '<strong>Urgent requirement</strong> - complete by EOD';
+}
