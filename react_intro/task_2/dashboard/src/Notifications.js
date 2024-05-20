@@ -1,5 +1,5 @@
 import './Notifications.css';
-import { getLastestNotification } from './utils';
+import { getLatestNotification } from './utils';
 // import React from 'react';
 
 function Notifications() {
@@ -26,7 +26,7 @@ function Notifications() {
         <li data-priority="urgent">New resume available</li>
         <li
           data-priority="urgent"
-          dangerouslySetInnerHTML={{ __html: getLastestNotification() }}
+          dangerouslySetInnerHTML={{ __html: getLatestNotification() }}
         >
         </li>
       </ul>
