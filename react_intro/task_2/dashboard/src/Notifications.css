@@ -1,6 +1,7 @@
 .Notifications {
   border: 2px dashed salmon;
   background: white;
+  position: relative;
 }
 
 .Notifications li[data-priority='default'] {
@@ -11,6 +12,6 @@
   color: red;
 }
 
-.Notifications li strong{
+.Notifications li strong {
   font-weight: 900;
 }
