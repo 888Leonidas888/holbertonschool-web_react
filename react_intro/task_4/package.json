@@ -2,7 +2,7 @@
   "name": "task_4",
   "version": "0.1.0",
   "private": true,
-  "homepage": "ttps://888Leonidas888.github.io/holbertonschool-web_react/task_4",
+  "homepage": "https://888Leonidas888.github.io/holbertonschool-web_react/task_4",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
