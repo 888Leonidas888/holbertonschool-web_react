@@ -7,9 +7,6 @@ module.exports = {
     filename: 'bundle.js',
   },
   mode: 'production',
-  performance: {
-    maxAssetSize: 100000,
-  },
   module: {
     rules: [
       {
@@ -18,16 +15,7 @@ module.exports = {
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
-        use: [
-          'file-loader',
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              bypassOnDebug: true,
-              disable: true,
-            },
-          },
-        ],
+        type: 'asset/resource',
       },
     ],
   },
