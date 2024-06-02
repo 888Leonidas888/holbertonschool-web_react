@@ -1,5 +1,5 @@
 const $ = require('jquery');
-const lodash = require('lodash');
+const _ = require('lodash');
 // import $ from 'jquery';
 
 $(document).ready(function () {
@@ -16,5 +16,5 @@ $(document).ready(function () {
     $('#count').text(`${count} clicks on the button`);
   }
 
-  $('button').on('click', lodash.debounce(updateCounter, 500));
+  $('button').on('click', _.debounce(updateCounter, 500));
 });
