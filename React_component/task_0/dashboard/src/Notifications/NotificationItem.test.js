@@ -15,8 +15,8 @@ describe('NotificationItem componente', () => {
   });
 
   it('Renderiza injectando HTML.', () => {
-    const tagHtml = '<p>test</p>'
+    const tagHtml = { __html: '<p>test</p>' };
     const wrapper = shallow(<NotificationItem type="default" html={tagHtml} />);
-    expect(wrapper.html()).toContain(tagHtml);
+    expect(wrapper.html()).toContain('<p>test</p>');
   });
 });

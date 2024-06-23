@@ -9,7 +9,9 @@
     "build": "webpack --config ./config/webpack.config.js"
   },
   "jest": {
-    "setupFilesAfterEnv": ["<rootDir>/config/setupTests.js"],
+    "setupFilesAfterEnv": [
+      "<rootDir>/config/setupTests.js"
+    ],
     "moduleNameMapper": {
       "\\.(css)$": "<rootDir>/cssTransform.js",
       "\\.(jpg|jpeg|png|gif|svg)$": "<rootDir>/fileTransform.js"
@@ -38,6 +40,7 @@
     "webpack-dev-server": "^5.0.4"
   },
   "dependencies": {
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   }
