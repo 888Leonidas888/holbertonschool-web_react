@@ -1,15 +1,10 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 
-function NotificationItem({ type = 'default', html, value }) {
+function NotificationItem({ type = 'default', html = null, value = '' }) {
   if (html) {
     return (
-      <li
-        data-notification-type={type}
-        dangerouslySetInnerHTML={{ __html: html }}
-      >
-        {value}
-      </li>
+      <li data-notification-type={type} dangerouslySetInnerHTML={html}></li>
     );
   } else {
     return <li data-notification-type={type}>{value}</li>;
@@ -18,7 +13,7 @@ function NotificationItem({ type = 'default', html, value }) {
 
 NotificationItem.propTypes = {
   html: PropTypes.shape({
-    __html: PropTypes.string.isRequired,
+    __html: PropTypes.string,
   }),
   type: PropTypes.string.isRequired,
   value: PropTypes.string,

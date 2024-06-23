@@ -35,8 +35,8 @@ function Notifications({ displayDrawer = true, listNotifications = [] }) {
                   <NotificationItem
                     key={item.id}
                     type={item.type}
-                    html={item.html}
                     value={item.value}
+                    html={item.html}
                   />
                 ))}
               </ul>
