@@ -1,0 +1,16 @@
+.Notifications {
+  border: 2px dashed salmon;
+  background: white;
+}
+
+.Notifications li[data-notification-type='default'] {
+  color: blue;
+}
+
+.Notifications li[data-notification-type='urgent'] {
+  color: red;
+}
+
+.Notifications li strong {
+  font-weight: 900;
+}
