@@ -1,0 +1,48 @@
+/* #CourseList {
+  background-color: aquamarine;
+} */
+#CourseList {
+  width: 60%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+thead {
+  text-align: center;
+}
+
+#CourseList th,
+#CourseList td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#CourseList th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+#CourseList tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#CourseList tr:hover {
+  background-color: #f1f1f1;
+}
+
+#CourseList th,
+#CourseList td {
+  padding: 12px 15px;
+}
+
+#CourseList th:first-child,
+#CourseList td:first-child {
+  padding-left: 20px;
+}
+
+#CourseList th:last-child,
+#CourseList td:last-child {
+  padding-right: 20px;
+}
