@@ -5,9 +5,11 @@ import PropTypes from 'prop-types';
 
 class BodySectionWithMarginBottom extends Component {
   render() {
-    const { title, children = null } = this.props;
+    // const { title, children = null } = this.props;
     return (
       <div className="bodySectionWithMargin">
+        {/* <BodySection title={title} {...this.props}> */}
+        {/* <BodySection {...this.props}/>{children}</BodySection> */}
         <BodySection {...this.props} />
       </div>
     );

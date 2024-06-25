@@ -50,27 +50,20 @@ class App extends Component {
         <div className="App">
           <Header />
           {this.props.isLoggedIn ? (
-            <BodySectionWithMarginBottom
-              title={'Course list'}
-              children={<CourseList listCourses={listCourses} />}
-            />
+            <BodySectionWithMarginBottom title={'Course list'}>
+              <CourseList listCourses={listCourses} />
+            </BodySectionWithMarginBottom>
           ) : (
-            // <CourseList listCourses={listCourses} />
-            <BodySectionWithMarginBottom
-              title={'Log in to continue'}
-              children={<Login />}
-            />
-            // <Login />
+            <BodySectionWithMarginBottom title={'Log in to continue'}>
+              <Login />
+            </BodySectionWithMarginBottom>
           )}
-          <BodySection
-            title={'News from the School'}
-            children={
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            }
-          />
+          <BodySection title={'News from the School'}>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </BodySection>
           <Footer />
         </div>
       </>
