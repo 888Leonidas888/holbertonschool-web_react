@@ -6,6 +6,8 @@ import Login from '../Login/Login';
 import PropTypes from 'prop-types';
 import CourseList from '../CourseList/CourseList';
 import { getLatestNotification } from '../utils/utils';
+import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
+import BodySection from '../BodySection/BodySection';
 
 const listCourses = [
   { id: 1, name: 'ES6', credit: 60 },
@@ -20,16 +22,6 @@ const listNotifications = [
 ];
 
 class App extends Component {
-  static propTypes = {
-    isLoggedIn: PropTypes.bool,
-    logOut: PropTypes.func,
-  };
-
-  static defaultProps = {
-    isLoggedIn: false,
-    logOut: () => {},
-  };
-
   constructor(props) {
     super(props);
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -58,15 +50,42 @@ class App extends Component {
         <div className="App">
           <Header />
           {this.props.isLoggedIn ? (
-            <CourseList listCourses={listCourses} />
+            <BodySectionWithMarginBottom
+              title={'Course list'}
+              children={<CourseList listCourses={listCourses} />}
+            />
           ) : (
-            <Login />
+            // <CourseList listCourses={listCourses} />
+            <BodySectionWithMarginBottom
+              title={'Log in to continue'}
+              children={<Login />}
+            />
+            // <Login />
           )}
+          <BodySection
+            title={'News from the School'}
+            children={
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            }
+          />
           <Footer />
         </div>
       </>
     );
   }
 }
+
+App.propTypes = {
+  isLoggedIn: PropTypes.bool,
+  logOut: PropTypes.func,
+};
+
+App.defaultProps = {
+  isLoggedIn: false,
+  logOut: () => {},
+};
 
 export default App;

@@ -14,7 +14,7 @@ class BodySection extends Component {
 }
 
 BodySection.propTypes = {
-  title: PropTypes.string.isrequired,
+  title: PropTypes.string,
   children: PropTypes.node,
 };
 
