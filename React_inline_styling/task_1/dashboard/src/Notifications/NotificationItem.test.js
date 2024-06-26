@@ -1,8 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import NotificationItem from '../Notifications/NotificationItem';
+import { StyleSheetTestUtils } from 'aphrodite';
 
 describe('NotificationItem componente', () => {
+  beforeAll(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+
+  afterAll(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+  });
+
   it('Renderiza sin romperse con la propiedad "default"', () => {
     const wrapper = shallow(<NotificationItem type="default" />);
     expect(wrapper.exists()).toBe(true);
