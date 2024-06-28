@@ -65,11 +65,12 @@ class App extends Component {
   }
 
   render() {
+    const { displayDrawer } = this.state;
     return (
       <>
         <Notifications
           listNotifications={listNotifications}
-          displayDrawer={this.state.displayDrawer}
+          displayDrawer={displayDrawer}
           handleDisplayDrawer={this.handleDisplayDrawer}
           handleHideDrawer={this.handleHideDrawer}
         />
