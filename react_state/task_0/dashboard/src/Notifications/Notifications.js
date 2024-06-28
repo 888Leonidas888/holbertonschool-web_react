@@ -66,8 +66,8 @@ class Notifications extends Component {
     const {
       displayDrawer = false,
       listNotifications = [],
-      handleDisplayDrawer,
-      handleHideDrawer,
+      handleDisplayDrawer = () => {},
+      handleHideDrawer = () => {},
     } = this.props;
 
     return (
