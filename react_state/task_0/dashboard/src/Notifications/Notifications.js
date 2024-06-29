@@ -64,10 +64,10 @@ class Notifications extends Component {
 
   render() {
     const {
-      displayDrawer = false,
-      listNotifications = [],
-      handleDisplayDrawer = () => {},
-      handleHideDrawer = () => {},
+      displayDrawer,
+      listNotifications,
+      handleDisplayDrawer,
+      handleHideDrawer,
     } = this.props;
 
     return (
@@ -114,6 +114,13 @@ Notifications.propTypes = {
   listNotifications: PropTypes.arrayOf(NotificationItemShape),
   handleDisplayDrawer: PropTypes.func,
   handleHideDrawer: PropTypes.func,
+};
+
+Notifications.defaultProps = {
+  displayDrawer: false,
+  listNotifications: [],
+  handleDisplayDrawer: () => {},
+  handleHideDrawer: () => {},
 };
 
 export default Notifications;
